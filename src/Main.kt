@@ -1,4 +1,4 @@
 fun main(){
-    val myName = "Fawzi Gharib Ahmed"
+    val myName = "Fawzi Dev"
     println("Hello $myName")
 }
