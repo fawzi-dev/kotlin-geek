@@ -1,15 +1,23 @@
 fun main(){
 
-    var firstNumber = 1;
-    val secondNumber = 2;
 
-    // This is working because the first number is mutable
-    firstNumber++;
+// In Kotlin, null safety is achieved through nullable and non-nullable types like any other language.
 
-    // This is working because the second number is immutable
-    // secondNumber++;
+// Non-nullable type
+var nonNullable: String = "Hello, World!"
+// nonNullable = null // This will cause a compilation error
 
-    println("First number after increment: $firstNumber")
+// Nullable type
+var nullable: String? = "Hello, Fawzi!"
+nullable = null // This is allowed
+
+// Safe call operator (?.) - returns null if the object is null
+val length: Int? = nullable?.length
+println(length) // Output: in case of null it will print null
+
+// Elvis operator (?:) - provides a default value if the object is null
+val lengthOrZero: Int = nullable?.length ?: 0
+println(lengthOrZero)
 
 
 }
