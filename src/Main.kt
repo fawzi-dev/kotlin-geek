@@ -1,39 +1,18 @@
 import java.util.*
 
 fun main(){
-    val scanner = Scanner(System.`in`)
-    println("Enter two integers: ")
-    val num1 = scanner.nextInt()
-    val num2 = scanner.nextInt()
-    scanner.close()
+    val names : MutableList<String> =  mutableListOf("Jon","Arya","Sansa")
+    names.add ("Ned")
+    names.removeAt(2) // Sansa will be removed
+    names.sort() // Sorting in alphabetical order
+    names.reverse()
+    val fullName:String = names.joinToString(" ", prefix = "Names: ", postfix = ".")
+
+    names[2] = "Daenerys"
+
+    names.replaceAll { "- " + it}
 
 
-    print("Addition: ")
-    addition(num1, num2)
-    print("Division: ")
-    division(num1, num2)
-    print("Multiplication: ")
-    multiplication(num1, num2)
-    print("Subtraction: ")
-    subtraction(num1, num2)
-}
-
-
-fun addition(x:Int,y:Int){
-    println(x + y)
-}
-
-fun division(x:Int,y:Int){
-    if(y == 0){
-        throw IllegalArgumentException("Division by zero is not allowed")
-    }
-    println(x / y)
-}
-
-fun multiplication(x:Int,y:Int){
-    println(x * y)
-}
-
-fun subtraction(x:Int,y:Int){
-    println(x - y)
+    println( fullName)
+    print(names)
 }
