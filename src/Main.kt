@@ -3,9 +3,12 @@ import java.util.*
 fun main() {
 
     /// Simple multiplication table
+    // Note that in kotlin we can name loops
 
-    for (i in 1..10) {
-        for (j in 1..10) {
+   parentLoop@ for (i in 1..10) {
+      childLoop@  for (j in 1..10) {
+          // Since we can name loops, we can break a single loop
+          if(i*j==35) break@childLoop;
             print("${i * j}\t")
         }
         println()
