@@ -1,18 +1,13 @@
 import java.util.*
 
 fun main(){
-    val names : MutableList<String> =  mutableListOf("Jon","Arya","Sansa")
-    names.add ("Ned")
-    names.removeAt(2) // Sansa will be removed
-    names.sort() // Sorting in alphabetical order
-    names.reverse()
-    val fullName:String = names.joinToString(" ", prefix = "Names: ", postfix = ".")
+val number = 25
 
-    names[2] = "Daenerys"
-
-    names.replaceAll { "- " + it}
-
-
-    println( fullName)
-    print(names)
+if (number in 10..20) {
+    println("Number is between 10 and 20")
+} else if (number in 21..30) {
+    println("Number is between 21 and 30")
+} else {
+    println("Number is outside the specified ranges")
+}
 }
